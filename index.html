@@ -12,15 +12,16 @@
 <body>
     <h1>Fun with AI</h1>
     <form action="" method="post" id="open-ai-form">
-        <label for="cars">Select Engine:</label>
-
+        <label for="engines">Select Engine:</label>
         <select name="engines" id="engines">
             <option class="select-option" value="text-curie-001">text-curie-001</option>
-
-</select>
-        <p>Enter a prompt:</p>
-        <textarea id="prompt" name="prompt" rows="4" cols="106">
+        </select>
+        <div id="text-area-container">
+            <label for="prompt">Enter a prompt:</label>
+            <textarea id="prompt" name="prompt" rows="4" cols="106">
             </textarea>
+        </div>
+
         <input type="submit" value="Submit">
       </form>
       <h2>Responses:</h2>
