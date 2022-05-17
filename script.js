@@ -1,4 +1,4 @@
-import OPENAI_SECRET from 'config.js';
+import OPENAI_SECRET from './config.js';
 
 const form = document.querySelector('#open-ai-form');
 const promptElement = document.querySelector('#prompt');
