@@ -1,3 +1,5 @@
+import OPENAI_SECRET from 'config.js';
+
 const form = document.querySelector('#open-ai-form');
 const promptElement = document.querySelector('#prompt');
 const responseContainer = document.querySelector('#response-container');
@@ -11,7 +13,7 @@ var xhr = new XMLHttpRequest();
 xhr.open('GET', url);
 
 xhr.setRequestHeader('Accept', 'application/json');
-xhr.setRequestHeader('Authorization', `Bearer ${process.env.OPENAI_SECRET}`);
+xhr.setRequestHeader('Authorization', `Bearer ${OPENAI_SECRET}`);
 
 xhr.onreadystatechange = function () {
 	if (xhr.readyState === 4) {
@@ -40,7 +42,7 @@ form.addEventListener('submit', function (event) {
 		true,
 	);
 	xhttp.setRequestHeader('Content-Type', 'application/json');
-	xhttp.setRequestHeader('Authorization', `Bearer ${process.env.OPENAI_SECRET}`);
+	xhttp.setRequestHeader('Authorization', `Bearer ${OPENAI_SECRET}`);
 	xhttp.onreadystatechange = function () {
 		if (this.readyState == 4 && this.status == 200) {
 			var response = this.responseText;
